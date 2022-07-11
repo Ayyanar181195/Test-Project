@@ -1,0 +1,25 @@
+Test List
+--------------------------------------------------------------------------------
+testcase: [mpc].cpa.no_ring_result check
+	VoicePrint	RingB	no_ring_result		play	
+	---------	-----	----------------	------	
+1	enabled		no		no_ring_result=0	silence		
+2	enabled		no		no_ring_result=2	silence		
+3	enabled		no		no_ring_result=15	silence		
+4	enabled		no		no_ring_result=16	silence						
+5	enabled		no		no_ring_result=17	silence						
+6	enabled		no		no_ring_result=18	silence						
+7	disabled	no		no_ring_result=2	silence		
+
+Postconnect event check
+9	enabled 	yes		no_ring_result=0	am.pcap
+10	enabled		yes		no_ring_result=0	human.pcap
+11	disabled	yes		no_ring_result=0	am.pcap
+12	disabled	yes		no_ring_result=0	human.pcap
+
+Preconnect event check
+13	enabled 	yes 	no_ring_result=0	-
+14	enabled 	yes 	no_ring_result=0	cm_UnknownOperator_IsBusy.pcap
+15	enabled		yes		no_ring_result=0	busy.pcap
+16	disabled	yes 	no_ring_result=0	-
+17	disabled	yes		no_ring_result=0	busy.pcap
