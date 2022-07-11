@@ -1,0 +1,1 @@
+env LD_LIBRARY_PATH=$LD_LIBRARY_PATH:. ./pwcallmgr -host 172.24.130.59 -port 2020 -app "MCP_it10_hf_linux" 
